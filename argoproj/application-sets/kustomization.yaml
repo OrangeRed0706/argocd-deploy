@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: argocd
 resources:
   - appset-argo-base-apps.yaml
+  - appset-observability-apps.yaml
