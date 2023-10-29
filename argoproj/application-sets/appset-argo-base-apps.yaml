@@ -4,6 +4,10 @@ metadata:
   name: argocd-base
   namespace: argocd
 spec:
+  generators:
+  - list:
+      elements:
+      - env: inner-cluster
   project: default
   source:
     repoURL: 'https://github.com/OrangeRed0706/argocd-deploy'

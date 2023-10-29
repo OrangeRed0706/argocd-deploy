@@ -3,6 +3,10 @@ kind: ApplicationSet
 metadata:
   name: appset-observability-apps
 spec:
+  generators:
+  - list:
+      elements:
+      - env: inner-cluster
   template:
     metadata:
       labels:
