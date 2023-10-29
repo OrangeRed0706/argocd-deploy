@@ -8,14 +8,13 @@ spec:
       labels:
         type: argocd-base
       namespace: argocd
-      name: 'apps-observability-{{env}}'
+      name: 'apps-observability'
     spec:
       destination:
         name: 'in-cluster'
         namespace: argocd
       source:
-        path: 'deploy/kustomization/argocd-application/observability/env-{{env}}'
-        repoURL: >-
-          https://github.com/YuChia-Wei/argoproj-deploy
+        path: './application/observability'
+        repoURL: 'https://github.com/OrangeRed0706/argocd-deploy'
         targetRevision: main
       project: default
