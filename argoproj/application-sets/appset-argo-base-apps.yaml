@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/OrangeRed0706/argocd-deploy'
-    path: ./argoproj/stable/manifests
+    path: ./argoproj/application-sets
     targetRevision: HEAD
 
   destination:

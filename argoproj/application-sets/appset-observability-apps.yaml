@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset-observability-apps
+spec:
+  template:
+    metadata:
+      labels:
+        type: argocd-base
+      namespace: argocd
+      name: 'apps-observability-{{env}}'
+    spec:
+      destination:
+        name: 'in-cluster'
+        namespace: argocd
+      source:
+        path: 'deploy/kustomization/argocd-application/observability/env-{{env}}'
+        repoURL: >-
+          https://github.com/YuChia-Wei/argoproj-deploy
+        targetRevision: main
+      project: default
