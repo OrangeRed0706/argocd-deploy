@@ -15,7 +15,7 @@ spec:
     helm:
       releaseName: fluent-bit
       valueFiles:
-        - ./fluent-bit-valueFiles.yaml
+        - ./values.yaml
     chart: fluent-bit
   project: default
   syncPolicy:
