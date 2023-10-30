@@ -4,3 +4,4 @@ namespace: argocd
 resources:
   - appset-argo-base-apps.yaml
   - appset-observability-apps.yaml
+  - appset-configmap-apps.yaml
