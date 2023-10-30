@@ -4,7 +4,7 @@ metadata:
   labels:
     type: cluster-infra
   namespace: argocd
-  name: fluent-bit
+  name: fluentbit
 spec:
   destination:
     name: 'in-cluster'
@@ -13,10 +13,23 @@ spec:
     repoURL: 'https://fluent.github.io/helm-charts'
     targetRevision: 0.39.0
     helm:
-      releaseName: fluent-bit
+      releaseName: fluentbit
       valueFiles:
-        - fluent-bit-valueFiles.yaml
-    chart: fluent-bit
+        - values.yaml
+      parameters:
+        - name: alertmanager.enabled
+          value: 'false'
+        - name: server.persistentVolume.enabled
+          value: 'false'
+        - name: alertmanager.persistentVolume.enabled
+          value: 'false'
+        - name: server.global.scrape_interval
+          value: 15s
+        - name: nodeExporter.service.hostPort
+          value: '11005'
+        - name: nodeExporter.service.servicePort
+          value: '11005'
+    chart: fluentbit
   project: default
   syncPolicy:
     syncOptions:
