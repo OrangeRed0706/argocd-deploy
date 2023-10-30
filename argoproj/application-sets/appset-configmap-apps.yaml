@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset-configmap-apps
+spec:
+  generators:
+  - list:
+      elements:
+      - env: inner-cluster
+  template:
+    metadata:
+      labels:
+        type: argocd-base
+      namespace: argocd
+      name: 'apps-configmap'
+    spec:
+      destination:
+        name: 'in-cluster'
+        namespace: argocd
+      source:
+        path: './application/configmap'
+        repoURL: 'https://github.com/OrangeRed0706/argocd-deploy'
+        targetRevision: main
+      project: default
