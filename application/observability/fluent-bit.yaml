@@ -29,9 +29,6 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      annotations:
-        checksum/config: 543037954b5e472b0ffc38ca6c4b55f3f8a3c456ddbf973f0d17dfc5ae3d828b
-      creationTimestamp: null
       labels:
         app.kubernetes.io/instance: fluentbit
         app.kubernetes.io/name: fluentbit
