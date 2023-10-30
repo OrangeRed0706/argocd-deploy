@@ -7,3 +7,4 @@ resources:
   - prometheus.yaml
   - service-logging-grafana.yaml
   - tempo.yaml
+  - fluent-bit.yaml
