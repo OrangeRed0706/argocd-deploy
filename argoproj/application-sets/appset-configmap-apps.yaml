@@ -18,7 +18,7 @@ spec:
         name: 'in-cluster'
         namespace: argocd
       source:
-        path: './application/configmap'
+        path: './configmap'
         repoURL: 'https://github.com/OrangeRed0706/argocd-deploy'
         targetRevision: main
       project: default
