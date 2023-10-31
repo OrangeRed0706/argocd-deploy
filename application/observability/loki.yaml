@@ -16,9 +16,7 @@ spec:
     helm:
       releaseName: loki
       valueFiles:
-        - values.yaml
-      values: |-
-        kind: Deployment        
+        - values.yaml    
   project: default
   syncPolicy:
     syncOptions:
