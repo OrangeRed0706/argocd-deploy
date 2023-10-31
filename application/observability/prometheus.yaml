@@ -16,6 +16,8 @@ spec:
       releaseName: prometheus
       valueFiles:
         - values.yaml
+      values: |-
+        kind: Deployment        
       parameters:
         - name: alertmanager.enabled
           value: 'false'

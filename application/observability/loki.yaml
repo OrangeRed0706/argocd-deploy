@@ -17,6 +17,8 @@ spec:
       releaseName: loki
       valueFiles:
         - values.yaml
+      values: |-
+        kind: Deployment        
   project: default
   syncPolicy:
     syncOptions:

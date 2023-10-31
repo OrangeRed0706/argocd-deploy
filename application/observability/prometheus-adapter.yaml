@@ -18,6 +18,7 @@ spec:
       valueFiles:
         - values.yaml
       values: |-
+        kind: Deployment      
         rules:
           default: true
           resource:

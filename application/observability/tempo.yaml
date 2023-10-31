@@ -17,6 +17,8 @@ spec:
       releaseName: tempo
       valueFiles:
         - values.yaml
+      values: |-
+        kind: Deployment        
       parameters:
         - name: search.enabled
           value: 'true'
