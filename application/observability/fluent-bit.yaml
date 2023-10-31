@@ -17,6 +17,7 @@ spec:
       valueFiles:
         - ./values.yaml
       values: |-
+        kind: Deployment
         config:
           daemonSetVolumes:
             - name: varlog
