@@ -39,12 +39,12 @@ spec:
         - name: metaMonitoring.grafanaAgent.logs.remote.url
           value: 'http://loki.observability.svc.cluster.local:3100/loki/api/v1/push'
   project: default
-  syncPolicy:
-    syncOptions:
-      - PruneLast=true
-      - RespectIgnoreDifferences=true
-      - ApplyOutOfSyncOnly=true
-      - CreateNamespace=true
+  # syncPolicy:
+  #   syncOptions:
+  #     - PruneLast=true
+  #     - RespectIgnoreDifferences=true
+  #     - ApplyOutOfSyncOnly=true
+  #     - CreateNamespace=true
   ignoreDifferences:
     - group: apps
       kind: Deployment

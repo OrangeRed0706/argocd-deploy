@@ -33,12 +33,12 @@ spec:
           value: '11005'
     chart: prometheus
   project: default
-  syncPolicy:
-    syncOptions:
-      - PruneLast=true
-      - RespectIgnoreDifferences=true
-      - ApplyOutOfSyncOnly=true
-      - CreateNamespace=true
+  # syncPolicy:
+  #   syncOptions:
+  #     - PruneLast=true
+  #     - RespectIgnoreDifferences=true
+  #     - ApplyOutOfSyncOnly=true
+  #     - CreateNamespace=true
   ignoreDifferences:
     - group: apps
       kind: Deployment

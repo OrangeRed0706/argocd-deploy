@@ -68,12 +68,12 @@ spec:
         - name: prometheus.port
           value: '80'
   project: default
-  syncPolicy:
-    syncOptions:
-      - PruneLast=true
-      - RespectIgnoreDifferences=true
-      - ApplyOutOfSyncOnly=true
-      - CreateNamespace=true
+  # syncPolicy:
+  #   syncOptions:
+  #     - PruneLast=true
+  #     - RespectIgnoreDifferences=true
+  #     - ApplyOutOfSyncOnly=true
+  #     - CreateNamespace=true
   ignoreDifferences:
     - group: apps
       kind: Deployment

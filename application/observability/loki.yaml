@@ -18,12 +18,12 @@ spec:
       valueFiles:
         - values.yaml    
   project: default
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-      - ApplyOutOfSyncOnly=true
-      - PruneLast=true
-      - RespectIgnoreDifferences=true
+  # syncPolicy:
+  #   syncOptions:
+  #     - CreateNamespace=true
+  #     - ApplyOutOfSyncOnly=true
+  #     - PruneLast=true
+  #     - RespectIgnoreDifferences=true
   ignoreDifferences:
     - group: apps
       kind: Deployment

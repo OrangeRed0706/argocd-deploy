@@ -90,12 +90,12 @@ spec:
         - name: env.GF_FEATURE_TOGGLES_ENABLE
           value: 'tempoSearch tempoBackendSearch tempoApmTable'
   project: default
-  syncPolicy:
-    syncOptions:
-      - PruneLast=true
-      - RespectIgnoreDifferences=true
-      - ApplyOutOfSyncOnly=true
-      - CreateNamespace=true
+  # syncPolicy:
+  #   syncOptions:
+  #     - PruneLast=true
+  #     - RespectIgnoreDifferences=true
+  #     - ApplyOutOfSyncOnly=true
+  #     - CreateNamespace=true
   ignoreDifferences:
     - group: apps
       kind: Deployment
